@@ -66,4 +66,8 @@ $age = $_GET["age"];
 if (strlen($name) >= 3 && !is_nan($name)) {
   echo($name);
 }
+if (strpos($mail, ".") !== false && strpos($mail, "@") !== false) {
+  echo($mail);
+}
+
  ?>
