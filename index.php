@@ -25,6 +25,9 @@ $matches = [
   ["Acqua S.Bernardo Cantù - Carpegna Prosciutto Pesaro | 81 - 72"]
 ];
 
-var_dump($match);
+for ($i = 0; $i < count($matches); $i++) {
+  var_dump($matches[$i]);
+}
+
 
  ?>
