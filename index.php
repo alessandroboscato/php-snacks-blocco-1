@@ -14,6 +14,7 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 
 <?php
 
+//snack 1.1
 // $matches = [
 //   ["Dolomiti Energia Trentino - UNAHOTELS Reggio Emilia | 81 - 87"],
 //   ["Vanoli Basket Cremona - Umana Reyer Venezia | 66 -83"],
@@ -25,30 +26,44 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 //   ["Acqua S.Bernardo Cantù - Carpegna Prosciutto Pesaro | 81 - 72"]
 // ];
 
-$matches = [
-  [
-    "squadra di casa" => "Dolomiti Energia Trentino",
-    "squadra ospite" => "UNAHOTELS Reggio Emilia",
-    "punti squadra di casa" => 81,
-    "punti squadra ospite" => 87
-  ],
-  [
-    "squadra di casa" => "Vanoli Basket Cremona",
-    "squadra ospite" => "Umana Reyer Venezia",
-    "punti squadra di casa" => 66,
-    "punti squadra ospite" => 83
-  ],
-  [
-    "squadra di casa" => "A|X Armani Exchange Milano",
-    "squadra ospite" => "De'Longhi Treviso",
-    "punti squadra di casa" => 104,
-    "punti squadra ospite" => 64
-  ]
-];
+//snack 1.2
+// $matches = [
+//   [
+//     "squadra di casa" => "Dolomiti Energia Trentino",
+//     "squadra ospite" => "UNAHOTELS Reggio Emilia",
+//     "punti squadra di casa" => 81,
+//     "punti squadra ospite" => 87
+//   ],
+//   [
+//     "squadra di casa" => "Vanoli Basket Cremona",
+//     "squadra ospite" => "Umana Reyer Venezia",
+//     "punti squadra di casa" => 66,
+//     "punti squadra ospite" => 83
+//   ],
+//   [
+//     "squadra di casa" => "A|X Armani Exchange Milano",
+//     "squadra ospite" => "De'Longhi Treviso",
+//     "punti squadra di casa" => 104,
+//     "punti squadra ospite" => 64
+//   ]
+// ];
+//
+// for ($i = 0; $i < count($matches); $i++) {
+//   var_dump($matches[$i]["squadra di casa"]." - ".$matches[$i]["squadra ospite"]." | ".$matches[$i]["punti squadra di casa"]." - ".$matches[$i]["punti squadra ospite"] );
+// }
 
-for ($i = 0; $i < count($matches); $i++) {
-  var_dump($matches[$i]["squadra di casa"]." - ".$matches[$i]["squadra ospite"]." | ".$matches[$i]["punti squadra di casa"]." - ".$matches[$i]["punti squadra ospite"] );
+ ?>
+
+<?php
+//snack 2
+$name = $_GET["name"];
+// controlla che name sia più lungo di 3 caratteri,
+$mail = $_GET["mail"];
+// controlla che mail contenga un punto e una chiocciola
+$age = $_GET["age"];
+//controlla che age sia un numero
+
+if (strlen($name) >= 3 && !is_nan($name)) {
+  echo($name);
 }
-
-
  ?>
