@@ -14,19 +14,40 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 
 <?php
 
+// $matches = [
+//   ["Dolomiti Energia Trentino - UNAHOTELS Reggio Emilia | 81 - 87"],
+//   ["Vanoli Basket Cremona - Umana Reyer Venezia | 66 -83"],
+//   ["A|X Armani Exchange Milano - De'Longhi Treviso | 104 - 64"],
+//   ["Germani Brescia - Virtus Segafredo Bologna | 80 - 81"],
+//   ["Banco di Sardegna Sassari - Allianz Pallacanestro Trieste | 72 -74"],
+//   ["Fortitudo Lavoropiù Bologna - Openjobmetis Varese | 83 - 88"],
+//   ["Happy Casa Brindisi - Virtus Roma | 92 - 67"],
+//   ["Acqua S.Bernardo Cantù - Carpegna Prosciutto Pesaro | 81 - 72"]
+// ];
+
 $matches = [
-  ["Dolomiti Energia Trentino - UNAHOTELS Reggio Emilia | 81 - 87"],
-  ["Vanoli Basket Cremona - Umana Reyer Venezia | 66 -83"],
-  ["A|X Armani Exchange Milano - De'Longhi Treviso | 104 - 64"],
-  ["Germani Brescia - Virtus Segafredo Bologna | 80 - 81"],
-  ["Banco di Sardegna Sassari - Allianz Pallacanestro Trieste | 72 -74"],
-  ["Fortitudo Lavoropiù Bologna - Openjobmetis Varese | 83 - 88"],
-  ["Happy Casa Brindisi - Virtus Roma | 92 - 67"],
-  ["Acqua S.Bernardo Cantù - Carpegna Prosciutto Pesaro | 81 - 72"]
+  [
+    "squadra di casa" => "Dolomiti Energia Trentino",
+    "squadra ospite" => "UNAHOTELS Reggio Emilia",
+    "punti squadra di casa" => 81,
+    "punti squadra ospite" => 87
+  ],
+  [
+    "squadra di casa" => "Vanoli Basket Cremona",
+    "squadra ospite" => "Umana Reyer Venezia",
+    "punti squadra di casa" => 66,
+    "punti squadra ospite" => 83
+  ],
+  [
+    "squadra di casa" => "A|X Armani Exchange Milano",
+    "squadra ospite" => "De'Longhi Treviso",
+    "punti squadra di casa" => 104,
+    "punti squadra ospite" => 64
+  ]
 ];
 
 for ($i = 0; $i < count($matches); $i++) {
-  var_dump($matches[$i]);
+  var_dump($matches[$i]["squadra di casa"]." - ".$matches[$i]["squadra ospite"]." | ".$matches[$i]["punti squadra di casa"]." - ".$matches[$i]["punti squadra ospite"] );
 }
 
 
