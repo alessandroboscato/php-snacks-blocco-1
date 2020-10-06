@@ -15,22 +15,34 @@ $age = $_GET["age"];
 //controlla che age sia un numero
 $user_data = "";
 
-if (strlen($name) >= 3 && !is_nan($name)) {
- echo($name);
- $user_data .= $name. " ";
+//SAMUELE
+// if (strlen($name) > 3 && strpos($mail, ".") !== false && strpos($mail, "@") !== false && is_numeric($age)) {
+//   echo "Accesso riuscito";
+// } else {
+// echo "Accesso negato";
+// }
+//SAMUELE
+//controllo che i get non siano vuoti
+if (empty($_GET["name"]) || empty($_GET["mail"]) || empty($_GET["age"])) {
+  echo "Guarda che devi inserire tutti i dati";
+  die;
+} else {
+  //controlla ogni singolo get
+  if (strlen($name) > 3 && !is_nan($name)) {
+   echo($name);
+   $user_data .= $name. " ";
+  }
 
+  if (strpos($mail, ".") !== false && strpos($mail, "@") !== false) {
+   echo($mail);
+   $user_data .= $mail. " ";
+  }
+
+  if (is_numeric($age) && $age > 0) {
+   echo($age);
+   $user_data .= $age. " ";
+  }
 }
-
-if (strpos($mail, ".") !== false && strpos($mail, "@") !== false) {
- echo($mail);
- $user_data .= $mail. " ";
-}
-
-if (is_numeric($age) && $age > 0) {
- echo($age);
- $user_data .= $age. " ";
-}
-
 ?>
 
 <h1>Dati inseriti dall'utente: <?php echo $user_data?></h1>

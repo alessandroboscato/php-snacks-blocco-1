@@ -40,7 +40,7 @@ $matches = [
 ];
 
 for ($i = 0; $i < count($matches); $i++) {
-  var_dump($matches[$i]["squadra di casa"]." - ".$matches[$i]["squadra ospite"]." | ".$matches[$i]["punti squadra di casa"]." - ".$matches[$i]["punti squadra ospite"] );
+  echo($matches[$i]["squadra di casa"]." - ".$matches[$i]["squadra ospite"]." | ".$matches[$i]["punti squadra di casa"]." - ".$matches[$i]["punti squadra ospite"]. "<br>" );
 }
 
  ?>
